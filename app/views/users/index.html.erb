@@ -1,0 +1,23 @@
+<% provide(:title, 'All users') %>
+<h1 class="text-2xl">ユーザー一覧</h1>
+
+<%= will_paginate  @users%>
+
+<% @users.each do |user| %>
+  <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="avatar">
+      <div class="w-24 rounded-xl">
+        <img src="https://placeimg.com/192/192/people" />
+      </div>
+    </div>
+    <div class="card-body">
+      <h2 class="card-title"><%= user.name %></h2>
+      <%# <p>If a dog chews shoes whose shoes does he choose?</p> %>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">フォロー</button>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= will_paginate  @users%>
