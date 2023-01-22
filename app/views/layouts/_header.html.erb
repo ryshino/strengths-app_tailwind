@@ -1,0 +1,27 @@
+<div class="navbar bg-base-100">
+  <div class="flex-1">
+    <%= link_to root_path do %>
+      <a class="btn btn-ghost normal-case text-xl">StrengthsApp</a>
+    <% end %>
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      <li><a>ユーザー一覧</a></li>
+      <li><a>投稿一覧</a></li>
+      <li><a>新規投稿</a></li>
+    </ul>
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+        <div class="w-10 rounded-full">
+          <%# ユーザーの画像を挿入する %>
+          <img src="https://placeimg.com/80/80/people" />
+        </div>
+      </label>
+      <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a>プロフィール詳細</a></li>
+        <li><a>プロフィール編集</a></li>
+        <li><a>ログアウト</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
