@@ -73,3 +73,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "will_paginate"
+
+gem "faker"
+gem 'gimei'

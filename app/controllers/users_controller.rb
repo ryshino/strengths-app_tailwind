@@ -3,6 +3,10 @@ class UsersController < ApplicationController
                                         :following, :followers]
   before_action :correct_user,   only: [:edit, :update]
   before_action :admin_user,     only: :destroy
+  
+  def index
+    @users = User.paginate(page: params[:page], per_page: 15)
+  end
 
   def show
     @user = User.find(params[:id])
@@ -16,6 +20,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     # @user.profile_icon.attach(params[:user][:profile_icon])
     if @user.save
+      reset_session
+      log_in @user
       flash[:success] = "ユーザー登録に成功しました"
       redirect_to @user
     else
