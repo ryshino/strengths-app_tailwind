@@ -18,8 +18,8 @@
         </div>
       </label>
       <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>プロフィール詳細</a></li>
-        <li><a>プロフィール編集</a></li>
+        <li><%= link_to "プロフィール詳細", user_path(current_user) %></li>
+        <li><%= link_to "プロフィール編集", edit_user_path(current_user) %></li>
         <li><a>ログアウト</a></li>
       </ul>
     </div>
