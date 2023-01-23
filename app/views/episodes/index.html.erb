@@ -1,0 +1,7 @@
+
+<% @episodes.each do |episode| %>
+  <%# nameをアイコンに変更する %>
+  <%= episode.user.name %><br>
+  <%= episode.title %><br>
+  <%= episode.content %><br>
+<% end %>

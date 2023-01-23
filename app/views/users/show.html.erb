@@ -1,3 +1,11 @@
-<%= @user.name %>
+<%#= @user.name %>
 <%#= @user.icon %>
 <%#= @user.strengths %>
+<% if @episodes.any? %>
+  <%= @user.name %>の投稿一覧(<%= @user.episodes.count %>)<br>
+  <% @episodes.each do |episode| %>
+    <%= episode.title %><br>
+    <%= episode.content %><br>
+  <% end %>
+  <%= will_paginate @episodes %>
+<% end %>
